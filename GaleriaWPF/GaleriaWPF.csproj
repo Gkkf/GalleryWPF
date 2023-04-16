@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{84BB9CDC-91FC-4E1B-8814-98A75970036E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GaleriaWPF</RootNamespace>
+    <AssemblyName>GaleriaWPF</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gallery.cs" />
+    <Compile Include="InjectObjects.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Photos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Photo.cs" />
+    <Compile Include="Photos.xaml.cs">
+      <DependentUpon>Photos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\amur.jpg" />
+    <Resource Include="img\babka.jpg" />
+    <Resource Include="img\badylarka.jpg" />
+    <Resource Include="img\bazant.jpg" />
+    <Resource Include="img\bocian.jpg" />
+    <Resource Include="img\bocja.jpg" />
+    <Resource Include="img\bogatka.jpg" />
+    <Resource Include="img\bolen.jpg" />
+    <Resource Include="img\brzana.jpg" />
+    <Resource Include="img\bzyg.jpg" />
+    <Resource Include="img\czajka.jpg" />
+    <Resource Include="img\czapla.jpg" />
+    <Resource Include="img\czepiak.jpg" />
+    <Resource Include="img\czteroplama.jpg" />
+    <Resource Include="img\danio.jpg" />
+    <Resource Include="img\delfin.jpg" />
+    <Resource Include="img\delfind.jpg" />
+    <Resource Include="img\dorsz.jpg" />
+    <Resource Include="img\drozd.jpg" />
+    <Resource Include="img\dzieciol.jpg" />
+    <Resource Include="img\fioletowa.jpg" />
+    <Resource Include="img\galago.jpg" />
+    <Resource Include="img\garbik.jpg" />
+    <Resource Include="img\gnojka.jpg" />
+    <Resource Include="img\golab.jpg" />
+    <Resource Include="img\goryl.jpg" />
+    <Resource Include="img\husarz.jpg" />
+    <Resource Include="img\jaz.jpg" />
+    <Resource Include="img\jerzyk.jpg" />
+    <Resource Include="img\jez.jpg" />
+    <Resource Include="img\karas.jpg" />
+    <Resource Include="img\karlatek.jpg" />
+    <Resource Include="img\karp.jpg" />
+    <Resource Include="img\korys.jpg" />
+    <Resource Include="img\kowal.jpg" />
+    <Resource Include="img\leszcz.jpg" />
+    <Resource Include="img\lin.jpg" />
+    <Resource Include="img\lipien.jpg" />
+    <Resource Include="img\lis.jpg" />
+    <Resource Include="img\losos.jpg" />
+    <Resource Include="img\majowy.jpg" />
+    <Resource Include="img\miodna.jpg" />
+    <Resource Include="img\mucha.jpg" />
+    <Resource Include="img\murzynka.jpg" />
+    <Resource Include="img\myszd.jpg" />
+    <Resource Include="img\myszl.jpg" />
+    <Resource Include="img\nefrytek.jpg" />
+    <Resource Include="img\niedzwiedz.jpg" />
+    <Resource Include="img\niedzwiedzc.jpg" />
+    <Resource Include="img\odorek.jpg" />
+    <Resource Include="img\ogrodnica.jpg" />
+    <Resource Include="img\plataks.jpg" />
+    <Resource Include="img\ploc.jpg" />
+    <Resource Include="img\pluskwa.jpg" />
+    <Resource Include="img\powszelatek.jpg" />
+    <Resource Include="img\pstrag.jpg" />
+    <Resource Include="img\puchacz.jpg" />
+    <Resource Include="img\sandacz.jpg" />
+    <Resource Include="img\smuklik.jpg" />
+    <Resource Include="img\sojka.jpg" />
+    <Resource Include="img\sowas.jpg" />
+    <Resource Include="img\stepojez.jpg" />
+    <Resource Include="img\strojnica.jpg" />
+    <Resource Include="img\strzepiel.jpg" />
+    <Resource Include="img\szablak.jpg" />
+    <Resource Include="img\szczupak.jpg" />
+    <Resource Include="img\szczur.jpg" />
+    <Resource Include="img\szympans.jpg" />
+    <Resource Include="img\tarczowka.jpg" />
+    <Resource Include="img\trzmiel.jpg" />
+    <Resource Include="img\trzmielowka.jpg" />
+    <Resource Include="img\wal.jpg" />
+    <Resource Include="img\walen.jpg" />
+    <Resource Include="img\walkarz.jpg" />
+    <Resource Include="img\wilk.jpg" />
+    <Resource Include="img\wrobel.jpg" />
+    <Resource Include="img\wyjec.jpg" />
+    <Resource Include="img\zachodni.jpg" />
+    <Resource Include="img\zagiew.jpg" />
+    <Resource Include="img\zaglowiec.jpg" />
+    <Resource Include="img\zagrzebka.jpg" />
+    <Resource Include="img\zalotka.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

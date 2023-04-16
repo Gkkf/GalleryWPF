@@ -1,0 +1,67 @@
+﻿<Window x:Class="GaleriaWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GaleriaWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="700" MaxHeight="700" MinHeight="700" MinWidth="700" MaxWidth="700" WindowStartupLocation="CenterScreen">
+    <Grid Background="LightGray">
+        <Menu IsMainMenu="True" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <MenuItem Header="Ryby" DataContext="1"  Click="MenuItem_Click"/>
+            <MenuItem Header="Ptaki" DataContext="2" Click="MenuItem_Click"/>
+            <MenuItem Header="Owady" DataContext="3" Click="MenuItem_Click"/>
+            <MenuItem Header="Ssaki" DataContext="4" Click="MenuItem_Click"/>
+        </Menu>
+        
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Column="1" Grid.Row="1" Margin="-25, 0, 25, 0">
+                <Image x:Name="img1" Source="img/wal.jpg" Width="200" Height="200" MouseLeftButtonDown="img1_MouseLeftButtonDown"/>
+                <Label x:Name="text1" Content="1" VerticalAlignment="Center" Margin="0, -30, 0, 0" HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Grid.Row="1" Margin="25, 0, -25, 0">
+                <Image x:Name="img2" Source="img/wal.jpg" Width="200" Height="200" MouseLeftButtonDown="img2_MouseLeftButtonDown"/>
+                <Label x:Name="text2" Content="2" VerticalAlignment="Center" Margin="0, -30, 0, 0" HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel  Grid.Column="1" Grid.Row="2" Margin="-25, 0, 25, 0">                
+                <Image x:Name="img3" Source="img/wal.jpg" Width="200" Height="200" MouseLeftButtonDown="img3_MouseLeftButtonDown"/>
+                <Label x:Name="text3" Content="3" VerticalAlignment="Center" Margin="0, -30, 0, 0" HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Grid.Row="2" Margin="25, 0, -25, 0">                
+                <Image x:Name="img4" Source="img/wal.jpg" Width="200" Height="200" MouseLeftButtonDown="img4_MouseLeftButtonDown"/>
+                <Label x:Name="text4" Content="4" VerticalAlignment="Center" Margin="0, -30, 0, 0" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+        
+        
+        <Grid VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="65"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="0" x:Name="back" Content="Poprzednia" Visibility="Hidden" Margin="10" Click="back_Click"/>
+            <Button Grid.Column="2" x:Name="next" Content="Nastepna" Visibility="Hidden" Margin="10" Click="next_Click"/>
+        </Grid>
+    </Grid>
+</Window>
